@@ -10,7 +10,10 @@ import (
 
 func NumberFromCon() int {
 	reader := bufio.NewReader(os.Stdin)
-	input_str, _ := reader.ReadString('\n')
+	input_str, inp_err := reader.ReadString('\n')
+	if inp_err != nil {
+		log.Fatalf("Error Code: %v", inp_err)
+	}
 	input_str = RemoveEOLMarkers(input_str)
 	input_int, err := strconv.Atoi(input_str)
 
