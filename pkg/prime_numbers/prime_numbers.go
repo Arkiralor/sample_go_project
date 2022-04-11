@@ -1,5 +1,7 @@
 package prime_numbers
 
+import "fmt"
+
 func FindListOfPrimes(upper_limit int) []int {
 	var prime_list []int
 
@@ -7,9 +9,11 @@ func FindListOfPrimes(upper_limit int) []int {
 
 	for i := 3; i <= upper_limit; i += 1 {
 		if CheckIfPrime(i) {
+			fmt.Println("Prime number found: ", i)
 			prime_list = append(prime_list, i)
 		}
 	}
+	fmt.Print("\033[H\033[2J") // Clear the screen on Unix
 	return prime_list
 }
 
