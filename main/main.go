@@ -8,6 +8,7 @@ import (
 	"sample_project/pkg/prime_numbers"
 )
 
+// Entry point of the program.
 func main() {
 	fmt.Printf("\nWhat is it that you wish to do today?\n1. Find Prime Numbers\n2. Do Nothing\n\n")
 	inp := console_input.NumberFromCon()
@@ -15,6 +16,7 @@ func main() {
 	execute_choice(choice)
 }
 
+// Function to execute the choice made by the user.
 func execute_choice(choice string) {
 	if choice == "Primes" {
 		locate_primes()
@@ -23,6 +25,7 @@ func execute_choice(choice string) {
 	}
 }
 
+// Function to execute Choice 01.
 func locate_primes() {
 	fmt.Printf("\nTill what number do you want to check for primes?\n")
 	inp := console_input.NumberFromCon()

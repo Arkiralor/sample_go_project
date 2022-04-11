@@ -1,3 +1,4 @@
+// Package to deal with console input.
 package console_input
 
 import (
@@ -8,6 +9,7 @@ import (
 	"strings"
 )
 
+// Function to take a number input from the console.
 func NumberFromCon() int {
 	reader := bufio.NewReader(os.Stdin)
 	input_str, inp_err := reader.ReadString('\n')
@@ -25,6 +27,7 @@ func NumberFromCon() int {
 	return input_int
 }
 
+// Function to remove CLRF characters from a string.
 func RemoveEOLMarkers(s string) string {
 	s = strings.Replace(s, "\r", "", -1)
 	s = strings.Replace(s, "\n", "", -1)
@@ -32,6 +35,7 @@ func RemoveEOLMarkers(s string) string {
 	return s
 }
 
+// Function to remove whitespaces from a string.
 func RemoveWhiteSpaces(s string) string {
 	s = strings.Replace(s, " ", "", -1)
 
