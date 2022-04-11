@@ -28,5 +28,5 @@ func locate_primes() {
 	inp := console_input.NumberFromCon()
 	list_of_primes := prime_numbers.FindListOfPrimes(inp)
 
-	fmt.Printf("The list of Prime Numbers until %d is:\n%v", inp, list_of_primes)
+	fmt.Printf("The list of Prime Numbers until %d is:\n%v\n", inp, list_of_primes)
 }
