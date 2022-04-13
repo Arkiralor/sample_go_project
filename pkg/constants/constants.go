@@ -6,7 +6,10 @@ import "log"
 // Map variable to store the values for the choices of the Main Menu.
 var choice = map[int]string{
 	1: "Primes",
-	2: "None",
+	2: "Factors",
+	3: "Binary",
+	4: "RandomBinary",
+	5: "None",
 }
 
 // Function to resolve choices in the Main Menu.
