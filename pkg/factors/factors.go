@@ -2,10 +2,11 @@ package factors
 
 import (
 	"log"
+	"sort"
 )
 
 func FindFactors(num int) []int {
-	var factors []int = []int{1}
+	var factors []int = []int{1, num}
 	var upper_limit int = num / 2
 
 	for i := 2; i <= upper_limit; i += 1 {
@@ -15,6 +16,6 @@ func FindFactors(num int) []int {
 		}
 	}
 	factors = append(factors, num)
-
+	sort.Ints(factors)
 	return factors
 }
