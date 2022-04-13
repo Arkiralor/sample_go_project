@@ -12,5 +12,5 @@ func main() {
 	router := mux.NewRouter()
 	routers.RegisterRoutes(router)
 	http.Handle("/", router)
-	log.Fatal(http.ListenAndServe("localhost:4000", router))
+	log.Fatal(http.ListenAndServe("localhost:7000", router))
 }

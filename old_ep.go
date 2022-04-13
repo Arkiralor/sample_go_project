@@ -1,4 +1,4 @@
-package main
+package something
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ import (
 )
 
 // Entry point of the program.
-func main() {
+func old_ep() {
 	fmt.Print(
 		"\nWhat is it that you wish to do today?",
 		"\n1. Find Prime Numbers",

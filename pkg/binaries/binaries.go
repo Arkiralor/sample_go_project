@@ -38,8 +38,9 @@ func BinaryToInt(binary_num int) int {
 //Max. number of bits is 28.
 func GenerateRandomBinaryNumber(size int) int {
 	var rand_bin, current_size, rand_bit int = 0, 0, 0
+	rand.Seed(time.Now().UnixNano())
 	for current_size < size {
-		rand.Seed(time.Now().UnixNano())
+
 		rand_bit = rand.Intn(2)
 		rand_bin = rand_bin*10 + rand_bit
 		current_size += 1

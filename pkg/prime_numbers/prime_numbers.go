@@ -15,7 +15,6 @@ func FindListOfPrimes(upper_limit int) []int {
 			prime_list = append(prime_list, i)
 		}
 	}
-	fmt.Print("\033[H\033[2J") // Clear the screen on Unix
 	return prime_list
 }
 
