@@ -7,8 +7,8 @@ import (
 )
 
 var RegisterRoutes = func(router *mux.Router) {
-	router.HandleFunc("api/prime_list/{upper_limit}", controllers.PrimeList).Methods("GET")
-	router.HandleFunc("api/find_factors/{num}", controllers.FindFactors).Methods("GET")
-	router.HandleFunc("api/int_to_binary/{num}", controllers.IntToBinary).Methods("GET")
-	router.HandleFunc("api/random_binary/{bits}", controllers.RandomBinary).Methods("GET")
+	router.HandleFunc("api/v1/prime_list/{upper_limit}", controllers.PrimeList).Methods("GET")
+	router.HandleFunc("api/v1/find_factors/{num}", controllers.FindFactors).Methods("GET")
+	router.HandleFunc("api/v1/int_to_binary/{num}", controllers.IntToBinary).Methods("GET")
+	router.HandleFunc("api/v1/random_binary/{bits}", controllers.RandomBinary).Methods("GET")
 }
